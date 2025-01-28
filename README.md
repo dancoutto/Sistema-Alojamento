@@ -2,8 +2,6 @@ https://github.com/user-attachments/assets/54827d83-4a18-4e31-a206-8bb01060fedf
 
 Para rodar o sistema, basta baixar os ficheiros.
 
-Instruções para execução:
-
 Instale o XAMPP, inicializador de server local em alguns protocolos disposto em: "https://www.apachefriends.org/pt_br/download.html";
 
 Abra o XAMPP e inicialize os serviços "Apache" e "MySQL". Se atente a porta MySQL, o valor deve ser 3306.
@@ -18,8 +16,6 @@ Caso não funcione, baixe o NetBeans 8.0.2 e execute lá dentro.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 To run the system, simply download the files.
-
-Instructions for execution:
 
 Install XAMPP, a local server launcher for some protocols available at: "https://www.apachefriends.org/pt_br/download.html";
 

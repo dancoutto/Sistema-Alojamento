@@ -1,0 +1,16 @@
+.root{
+    -fx-base: #901812;
+    -fx-background: #fdf186;
+    -fx-font: Verdana;
+}
+.button {
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-text-fill: whitesmoke;
+}
+
+.label {
+    -fx-font-weight: arial;
+    -fx-font-size: 15px;
+    -fx-text-fill: black;
+}

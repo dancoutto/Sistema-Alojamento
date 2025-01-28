@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="656.0" minWidth="1342.0" prefHeight="674.0" prefWidth="1354.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaEmprestimoMateriaisController">
+    <children>
+        <SplitPane dividerPositions="0.3233357717629846" layoutX="-15.0" prefHeight="700.0" prefWidth="1395.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-14.0" AnchorPane.topAnchor="0.0">
+            <items>
+                <TableView fx:id="tblemprestimo" onMouseClicked="#tblemprestimoclicked" prefHeight="672.0" prefWidth="484.0" />
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="789.0" prefWidth="837.0">
+                    <children>
+                        <ImageView fitHeight="797.0" fitWidth="1321.0" layoutX="-247.0" layoutY="5.0" opacity="0.1" pickOnBounds="true">
+                            <image>
+                                <Image url="@../imgs/ufvcaf2.jpg" />
+                            </image>
+                        </ImageView>
+                        <VBox alignment="CENTER" layoutX="-10.0" layoutY="36.0" prefHeight="763.0" prefWidth="895.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="-10.0" AnchorPane.rightAnchor="-4.0" AnchorPane.topAnchor="36.0">
+                            <children>
+                                <Label alignment="CENTER" text="EMPRÉSTIMO DE MATERIAIS" textAlignment="CENTER" />
+                                <VBox alignment="CENTER" prefHeight="250.0" prefWidth="895.0">
+                                    <children>
+                                        <GridPane alignment="CENTER" prefHeight="260.0" prefWidth="895.0">
+                                            <columnConstraints>
+                                                <ColumnConstraints />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="253.0" minWidth="10.0" prefWidth="253.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="252.0" minWidth="10.0" prefWidth="252.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints maxHeight="80.0" minHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="80.0" minHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                            <children>
+                                                <Label text="MATRICULA DO ALUNO:" GridPane.columnIndex="1" />
+                                                <Label text="CÓDIGO DO MATERIAL:" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <TextField fx:id="txtmatriculaaluno" prefHeight="49.0" prefWidth="250.0" GridPane.columnIndex="2" />
+                                                <TextField fx:id="txtcodigomateriais" prefHeight="47.0" prefWidth="252.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                <Label text="DATA DO EMPRÉSTIMO:" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <DatePicker fx:id="dtEmprestimo" prefHeight="45.0" prefWidth="254.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                            </children>
+                                        </GridPane>
+                                    </children>
+                                </VBox>
+                                <VBox prefHeight="22.0" prefWidth="895.0" />
+                                <HBox alignment="CENTER" prefHeight="85.0" prefWidth="871.0">
+                                    <children>
+                                        <Button fx:id="btncadastrar" mnemonicParsing="false" onAction="#handlebtncadastraraction" prefHeight="61.0" prefWidth="125.0" text="CADASTRAR">
+                                            <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                            </HBox.margin>
+                                        </Button>
+                                        <Button fx:id="btnlimpar" mnemonicParsing="false" onAction="#handlebtnlimparaction" prefHeight="61.0" prefWidth="125.0" text="LIMPAR">
+                                            <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                            </HBox.margin>
+                                        </Button>
+                                        <Button fx:id="btnapagar" mnemonicParsing="false" onAction="#handlebtnapagaraction" prefHeight="61.0" prefWidth="125.0" text="APAGAR">
+                                            <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                            </HBox.margin>
+                                        </Button>
+                                    </children>
+                                </HBox>
+                                <VBox prefHeight="45.0" prefWidth="895.0" />
+                                <HBox alignment="CENTER" prefHeight="93.0" prefWidth="885.0">
+                                    <children>
+                                        <Button mnemonicParsing="false" onAction="#handlebtndevolucaoaction" prefHeight="61.0" prefWidth="125.0" text="DEVOLUÇÃO">
+                                            <HBox.margin>
+                                                <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+                                            </HBox.margin>
+                                        </Button>
+                                        <Label prefHeight="31.0" prefWidth="178.0" text="DATA DE DEVOLUÇÃO:">
+                                            <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                            </padding>
+                                            <HBox.margin>
+                                                <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <DatePicker fx:id="dtDevolucao" prefHeight="50.0" prefWidth="196.0">
+                                            <HBox.margin>
+                                                <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+                                            </HBox.margin>
+                                        </DatePicker>
+                                    </children>
+                                </HBox>
+                                <VBox alignment="CENTER" prefHeight="212.0" prefWidth="895.0">
+                                    <children>
+                                        <Label text="CONSULTA DE EMPRÉSTIMOS PENDENTES:" />
+                                        <VBox alignment="CENTER" prefHeight="85.0" prefWidth="881.0">
+                                            <children>
+                                                <Button fx:id="btnConsultar" mnemonicParsing="false" onAction="#btnConsultarhandleAction" prefHeight="61.0" prefWidth="125.0" text="CONSULTAR" />
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </VBox>
+                                <VBox layoutX="10.0" layoutY="343.0" prefHeight="22.0" prefWidth="895.0" />
+                                <VBox layoutX="10.0" layoutY="10.0" prefHeight="22.0" prefWidth="895.0" />
+                            </children>
+                        </VBox>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>

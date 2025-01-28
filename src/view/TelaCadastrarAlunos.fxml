@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="656.0" minWidth="1314.0" prefHeight="674.0" prefWidth="1342.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaCadastrarAlunosController">
+  <children>
+    <SplitPane dividerPositions="0.2124728063814358" layoutX="-15.0" prefHeight="700.0" prefWidth="1395.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-14.0" AnchorPane.topAnchor="0.0">
+      <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="672.0" prefWidth="275.0">
+          <children>
+            <TableView fx:id="tblCadastrarAlunos" layoutX="1.0" layoutY="-2.0" onMouseClicked="#tblCadastraralunosclicked" prefHeight="674.0" prefWidth="341.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-50.0" AnchorPane.topAnchor="-2.0" />
+          </children>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="672.0" prefWidth="1069.0">
+          <children>
+                  <ImageView fitHeight="698.0" fitWidth="1095.0" layoutX="-4.0" opacity="0.1" pickOnBounds="true">
+                     <image>
+                        <Image url="@../imgs/ufvcaf2.jpg" />
+                     </image>
+                  </ImageView>
+            <VBox alignment="CENTER" layoutX="14.0" layoutY="-24.0" prefHeight="687.0" prefWidth="1075.0" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-24.0">
+              <children>
+                <HBox alignment="CENTER" prefHeight="57.0" prefWidth="688.0">
+                  <children>
+                    <Label alignment="CENTER" contentDisplay="CENTER" text="CADASTRO DE ALUNOS" textAlignment="CENTER">
+                      <HBox.margin>
+                        <Insets bottom="30.0" left="100.0" right="30.0" top="30.0" />
+                      </HBox.margin>
+                    </Label>
+                  </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="267.0" prefWidth="1083.0">
+                  <children>
+                    <GridPane alignment="CENTER" prefHeight="223.0" prefWidth="648.0">
+                      <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="220.0" minWidth="10.0" prefWidth="131.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="268.0" minWidth="10.0" prefWidth="202.0" />
+                      </columnConstraints>
+                      <rowConstraints>
+                        <RowConstraints maxHeight="80.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="80.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                      </rowConstraints>
+                      <children>
+                        <Label prefHeight="45.0" prefWidth="132.0" text="NOME:" GridPane.rowIndex="1">
+                          <padding>
+                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                          </padding>
+                          <opaqueInsets>
+                            <Insets />
+                          </opaqueInsets>
+                          <GridPane.margin>
+                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                          </GridPane.margin>
+                        </Label>
+                        <Label prefHeight="37.0" prefWidth="213.0" text="CURSO TÉCNICO:" GridPane.rowIndex="2">
+                          <padding>
+                            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                          </padding>
+                          <opaqueInsets>
+                            <Insets />
+                          </opaqueInsets>
+                          <GridPane.margin>
+                            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                          </GridPane.margin>
+                        </Label>
+                        <Label prefHeight="45.0" prefWidth="159.0" text=" MATRÍCULA:">
+                          <padding>
+                            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                          </padding>
+                          <opaqueInsets>
+                            <Insets />
+                          </opaqueInsets>
+                                       <GridPane.margin>
+                                          <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                       </GridPane.margin>
+                        </Label>
+                                    <ComboBox fx:id="cbcursotecnico" prefHeight="44.0" prefWidth="269.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <TextField fx:id="txtnome" prefHeight="46.0" prefWidth="260.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets top="1.0" />
+                                       </GridPane.margin>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding></TextField>
+                                    <TextField fx:id="txtmatricula" onKeyPressed="#txtmatriculaKeyPress" onKeyReleased="#tfmatriculakeyreleased" prefHeight="42.0" prefWidth="268.0" GridPane.columnIndex="1">
+                                       <GridPane.margin>
+                                          <Insets top="1.0" />
+                                       </GridPane.margin>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding></TextField>
+                      </children>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                    </GridPane>
+                  </children>
+                </HBox>
+                        <VBox prefHeight="17.0" prefWidth="1083.0" />
+                <HBox alignment="CENTER" prefHeight="122.0" prefWidth="1083.0">
+                  <padding>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  </padding>
+                  <opaqueInsets>
+                    <Insets />
+                  </opaqueInsets>
+                  <children>
+                    <GridPane alignment="CENTER">
+                      <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="30.0" prefWidth="170.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="30.0" prefWidth="170.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="30.0" prefWidth="170.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="30.0" prefWidth="170.0" />
+                      </columnConstraints>
+                      <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      </rowConstraints>
+                      <children>
+                        <Button fx:id="btncadastrar" mnemonicParsing="false" onAction="#handlrebtncadastraraction" prefHeight="61.0" prefWidth="125.0" text="CADASTRAR" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                       </padding>
+                                       <GridPane.margin>
+                                          <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                       </GridPane.margin></Button>
+                        <Button fx:id="btnlimpar" mnemonicParsing="false" onAction="#handlelimparaction" prefHeight="61.0" prefWidth="125.0" text="LIMPAR" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                       </padding>
+                                       <GridPane.margin>
+                                          <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                       </GridPane.margin></Button>
+                        <Button fx:id="btnpesquisarnome" mnemonicParsing="false" onAction="#handlebtnpesquisaeaction" prefHeight="61.0" prefWidth="120.0" text="PESQUISAR" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                       </padding>
+                                       <GridPane.margin>
+                                          <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                       </GridPane.margin></Button>
+                        <Button fx:id="btnapagar" mnemonicParsing="false" onAction="#handlrebtnapagaraction" prefHeight="61.0" prefWidth="125.0" text="APAGAR" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                       </padding>
+                                       <GridPane.margin>
+                                          <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                       </GridPane.margin></Button>
+                      </children>
+                    </GridPane>
+                  </children>
+                </HBox>
+              </children>
+            </VBox>
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+  </children>
+</AnchorPane>

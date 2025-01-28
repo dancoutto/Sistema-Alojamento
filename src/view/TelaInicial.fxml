@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="700.0" minWidth="1352.0" prefHeight="700.0" prefWidth="1352.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaInicialController">
+   <children>
+      <MenuBar style="-fx-background-color: #901812;">
+        <menus>
+          <Menu mnemonicParsing="false" text="Cadastros">
+            <items>
+              <MenuItem fx:id="menuItemalunos" mnemonicParsing="false" onAction="#handleMenuItemAlunosAction" text="Alunos" />
+                  <MenuItem fx:id="menuItemmateriais" mnemonicParsing="false" onAction="#handleMenuItemmateriaisAction" text="Materiais" />
+                  <MenuItem fx:id="menuItemocorrencias" mnemonicParsing="false" onAction="#handleMenuItemocorrenciasAction" text="Ocorrências" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Serviços">
+               <items>
+                  <MenuItem fx:id="menuItemempMateriais" mnemonicParsing="false" onAction="#handleMenuItemEmpMateriaisAction" text="Empréstimo de Materiais" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane fx:id="anchorPane" prefHeight="675.0" prefWidth="1344.0" style="-fx-background-image: imgs/ufvcaf2.jpg;" stylesheets="@../css/style.css">
+         <children>
+            <ImageView fitHeight="675.0" fitWidth="1366.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../imgs/TELAINICIAL.jpg" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+   </children>
+</VBox>

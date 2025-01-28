@@ -17,9 +17,6 @@ Após isso, pode-se tentar executar o .jar, disposto em dist.
 Caso não funcione, baixe o NetBeans 8.0.2 e execute lá dentro. 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-Aware of a problem that affected our reality when we were studying at the Federal University of Viçosa, @Aline Santos, Cecilia and I combined business with pleasure in our final project for a technical course in Computer Science. Dec, 2022.
-
 To run the system, simply download the files.
 
 Instructions for execution:
